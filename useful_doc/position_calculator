@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name 3.25.155.207;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ec2-user/projects/position_calculator/position_calculator.sock;
+    }
+  }
